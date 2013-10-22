@@ -3,29 +3,34 @@
 // By: Michael Rose
 // ===========================================================
 
-// ROOT =======================================================
 // Variables and mixins =======================================
 @import "variables";
 @import "mixins";
+@import "grid";
+
 // CSS Reset ==================================================
 @import "reset";
+
 // Site wide styles (html, body, global classes) ==============
 @import "site";
+
 // TYPOGRAPHY =================================================
 @import "typography";
+
 // Pygments Syntax highlighting ===============================
 @import "pygments";
+
 // Coderay Syntax highlighting ===============================
 @import "coderay";
-// MIXINS =====================================================
-@import "grid";
-// ELEMENTS ===================================================
+
 // Figures, images, social media, other elements ==============
 @import "elements";
+
 // Font Awesome webfont icons =================================
 @import "font-awesome";
+
 // Standard form controls =====================================
 @import "forms";
-// LAYOUT =====================================================
+
 // Page level layout styles ===================================
 @import "page";

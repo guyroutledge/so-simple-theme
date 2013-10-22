@@ -20,12 +20,12 @@ body {
 // Colors
 // --------------------------------------------------
 
-$body-color      		: #ebebeb;
-$text-color      		: #222;
-$base-color 	 		: #343434;
-$comp-color 	 		: spin($base-color, 180);
-$border-color    		: $base-color;
-$white           		: #fff;
-$black           		: #000;
-$accent-color    		: $black;
-$link-color 		    : #222;
+$body-color   : #ebebeb;
+$text-color   : #222;
+$base-color   : #343434;
+$comp-color   : spin($base-color, 180);
+$border-color : $base-color;
+$white        : #fff;
+$black        : #000;
+$accent-color : $black;
+$link-color   : #222;
