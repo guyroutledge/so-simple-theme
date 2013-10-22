@@ -13,19 +13,6 @@ module.exports = function(grunt) {
         '!assets/js/scripts.min.js'
       ]
     },
-    recess: {
-      dist: {
-        options: {
-          compile: true,
-          compress: true
-        },
-        files: {
-          'assets/css/main.min.css': [
-            'assets/less/main.less'
-          ]
-        }
-      }
-    },
     uglify: {
       dist: {
         files: {
@@ -60,12 +47,19 @@ module.exports = function(grunt) {
         }]
       }
     },
+    sass: {
+      dist: {
+        files: {
+          'assets/css/main.css' : 'assets/scss/main.scss'
+        }
+      }
+    },
     watch: {
-      less: {
+      css: {
         files: [
-          'assets/less/*.less'
+          'assets/scss/*.scss'
         ],
-        tasks: ['recess']
+        tasks: ['sass']
       },
       js: {
         files: [
@@ -86,15 +80,15 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-recess');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-svgmin');
 
   // Register tasks
   grunt.registerTask('default', [
     'clean',
-    'recess',
+    'sass',
     'uglify',
     'imagemin',
     'svgmin'
